@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenova - الذكاء الاصطناعي التوليدي</title>
+
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/imgs/logo/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/imgs/logo/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/imgs/logo/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <!--Lottiefiles CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="nav-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- ==================== MEDIA PAGE ==================== -->
+      <section class="page-section" id="page-media">
+        <div class="media-page">
+          <div class="section-header">
+            <span class="section-label">🎨 المعرض</span>
+            <h2 class="section-title">معرض الصور والصوت والفيديو</h2>
+            <p class="section-subtitle">استكشف محتوى مولّد بالذكاء الاصطناعي</p>
+          </div>
+
+          <div class="media-tabs">
+            <button class="media-tab active" onclick="switchMediaTab('images')">
+              ️ الصور
+            </button>
+            <button class="media-tab" onclick="switchMediaTab('audio')">
+              🎵 الصوت
+            </button>
+            <button class="media-tab" onclick="switchMediaTab('video')">
+              🎬 الفيديو
+            </button>
+          </div>
+
+          <!-- Images Tab -->
+          <div class="media-content active" id="tab-images">
+            <div class="gallery-grid">
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="assets/imgs/1f1b0e773-c46c-424c-80a5-f34aeee4bb7f.webp"
+                  alt="AI Landscape"
+                />
+                <div class="gallery-overlay">
+                  <h4>جبال خيالية</h4>
+                  <p>توليد بالذكاء الاصطناعي</p>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="assets/imgs/14fb5c479-8f92-4149-8788-44402411abb7.webp"
+                  alt="AI Portrait"
+                />
+                <div class="gallery-overlay">
+                  <h4>بورتريه رقمي</h4>
+                  <p>فن رقمي بالـ AI</p>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="assets/imgs/1b4833520-b2bd-4257-9776-32721cdc732b.webp"
+                  alt="AI Abstract"
+                />
+                <div class="gallery-overlay">
+                  <h4>أشكال مجردة</h4>
+                  <p>توليد تلقائي</p>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img
+                  src="assets/imgs/1d375855a-54d0-4c74-bd0e-9a24647eb064.webp"
+                  alt="AI Cityscape"
+                />
+                <div class="gallery-overlay">
+                  <h4>مدينة المستقبل</h4>
+                  <p>تصور خيالي للمدن</p>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="assets/imgs/ai-img-1.webp" alt="AI Futuristic" />
+                <div class="gallery-overlay">
+                  <h4>قنادس البحر</h4>
+                  <p>زوج من القنادس تسبح في البحر</p>
+                </div>
+              </div>
+              <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="assets/imgs/ai-img-2.webp" alt="AI Neon City" />
+                <div class="gallery-overlay">
+                  <h4>فيلم مؤثر</h4>
+                  <p>صورة لمجموعة اشخاص تشاهد فيلم سينيمائي مؤثر</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Audio Tab -->
+          <div class="media-content" id="tab-audio">
+            <div class="audio-section">
+              <div class="audio-card">
+                <!-- <div class="audio-visualizer" id="visualizer1"></div> -->
+                <h4 class="audio-title">لغات البرمجة</h4>
+                <p class="audio-desc">
+                  مقطع صوتي تعريفي عن البرمجة ولغات البرمجة مولد بالذكاء الصنعي
+                </p>
+                <audio style="width: 100%" controls>
+                  <source
+                    src="./assets/audio/11983f30-140e-44bb-9b03-c1e3314395db-full.wav"
+                    type="audio/wav"
+                  />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <h4 class="audio-title">نظام تعلم الآلة GANS</h4>
+                <p class="audio-desc">
+                  مقطع صوتي يشرح عن نظام GANS المستخدم في توليد الصور والفيديو
+                </p>
+                <audio style="width: 100%" controls>
+                  <source
+                    src="./assets/audio/dd9ad8cf-34c6-4128-ab64-67ab2f31cc6d.mp3"
+                    type="audio/mp3"
+                  />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <!-- <div class="audio-visualizer" id="visualizer1"></div> -->
+                <h4 class="audio-title">أغنية Unbreakable</h4>
+                <p class="audio-desc">
+                  نموذج لأغنية تم تلحينها وغنائها بواسطة الذكاء الصنعي بعد
+                  تزويده بالكلمات
+                </p>
+                <audio style="width: 100%" controls>
+                  <source
+                    src="./assets/audio/Unbreakable.mp3"
+                    type="audio/wav"
+                  />
+                </audio>
+              </div>
+              <div class="audio-card">
+                <!-- <div class="audio-visualizer" id="visualizer1"></div> -->
+                <h4 class="audio-title">الشبكات الحاسوبية</h4>
+                <p class="audio-desc">
+                  مقطع صوتي يلخص تعليمي عن ماهية الشبكات الحاسوبية
+                </p>
+                <audio style="width: 100%" controls>
+                  <source
+                    src="./assets/audio/ai-audio-1.mpeg"
+                    type="audio/mpeg"
+                  />
+                </audio>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Tab -->
+          <div class="media-content" id="tab-video">
+            <div class="video-section">
+              <div class="video-card" id="videoCard1">
+                <div class="custom-video-player" id="customVideoPlayer1">
+                  <video
+                    id="aiVideo1"
+                    class="ai-process-video"
+                    preload="metadata"
+                    controls
+                  >
+                    <source
+                      src="assets/video/ai-video-1.mp4"
+                      type="video/mp4"
+                    />
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h4 class="video-title">التطور التكنولوجي</h4>
+                  <p class="video-desc">
+                    يظهر المقطع مشهد تخيلي لما وصل له العالم من التطور التكنولجي
+                  </p>
+                  <div class="video-meta">
+                    <span>⏱️ 0:06</span>
+                    <span>🎨 مولّد بالـ AI</span>
+                    <span>📺 1280p</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card" id="videoCard2">
+                <div class="custom-video-player" id="customVideoPlayer2">
+                  <video
+                    id="aiVideo2"
+                    class="ai-process-video"
+                    preload="metadata"
+                    controls
+                  >
+                    <source
+                      src="assets/video/ai-video-2.mp4"
+                      type="video/mp4"
+                    />
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h4 class="video-title">الحصان العربي</h4>
+                  <p class="video-desc">
+                    حصان عربي اصيل لونه اسود يقف على الشاطئ وقت الغروب وشعره
+                    يطير بنسيم البحر
+                  </p>
+                  <div class="video-meta">
+                    <span>️ 0:06</span>
+                    <span>🎨 مولّد بالـ AI</span>
+                    <span>📺 1080p</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card" id="videoCard3">
+                <div class="custom-video-player" id="customVideoPlayer3">
+                  <video
+                    id="aiVideo3"
+                    class="ai-process-video"
+                    preload="metadata"
+                    controls
+                  >
+                    <source
+                      src="assets/video/ai-video-3.mp4"
+                      type="video/mp4"
+                    />
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h4 class="video-title">حيوانات الغابة</h4>
+                  <p class="video-desc">
+                    يجلس الأسد منتصبًا، ويأتي إليه صديقاه الحمار الوحشي
+                    والزرافة، وتتبعه الكاميرا على طريقة مدونات الفيديو، وتقف
+                    الحيوانات معًا لالتقاط صورة جماعية، ويكون الأسد في منتصف
+                    الصورة، وتنحني الزرافة، ثم يتخذون وضعية التصوير.
+                  </p>
+                  <div class="video-meta">
+                    <span>️ 0:06</span>
+                    <span>🎨 مولّد بالـ AI</span>
+                    <span>📺 1080p</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-card" id="videoCard4">
+                <div class="custom-video-player" id="customVideoPlayer4">
+                  <video
+                    id="aiVideo4"
+                    class="ai-process-video"
+                    preload="metadata"
+                    controls
+                  >
+                    <source
+                      src="assets/video/ai-video-4.mp4"
+                      type="video/mp4"
+                    />
+                    المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                  </video>
+                </div>
+                <div class="video-info">
+                  <h4 class="video-title">البحث عن المجرم</h4>
+                  <p class="video-desc">
+                    يظهر الشرطي في حقل الذرة وهو يبحث عن المجرم
+                  </p>
+                  <div class="video-meta">
+                    <span>⏱️ 0:06</span>
+                    <span>🎨 مولّد بالـ AI</span>
+                    <span> 1080p</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="Lightbox Image" id="lightboxImg" />
+    </div>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

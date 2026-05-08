@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenova - الذكاء الاصطناعي التوليدي</title>
+
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/imgs/logo/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/imgs/logo/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/imgs/logo/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <!--Lottiefiles CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="nav-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- ==================== HOME PAGE ==================== -->
+      <section class="page-section" id="page-home">
+        <div class="hero">
+          <div class="hero-bg"></div>
+          <div class="hero-particles" id="particles"></div>
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                اكتشف قوة
+                <span class="gradient-text">الذكاء الاصطناعي التوليدي</span>
+              </h1>
+              <p class="hero-description">
+                الذكاء الاصطناعي التوليدي (Generative AI) هو تقنية متقدمة تتيح
+                للآلات إنشاء محتوى جديد تمامًا — من صور مذهلة وأصوات واقعية إلى
+                نصوص إبداعية وفيديوهات مذهلة. استكشف عالم الإبداع اللامحدود.
+              </p>
+              <div class="hero-buttons">
+                <a class="btn-primary" href="/tools.html">
+                  <span>🛠️</span>
+                  <span>استكشف الأدوات</span>
+                </a>
+                <a class="btn-secondary" href="/gallery.html">
+                  <span>🎨</span>
+                  <span>شاهد المعرض</span>
+                </a>
+              </div>
+              <div class="typing-text" id="typingText">
+                <span></span>
+              </div>
+            </div>
+            <div class="hero-image">
+              <div class="lottie-animation" id="heroLottie"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-section">
+          <div class="stats-grid">
+            <div class="stat-card fade-in-up">
+              <div class="stat-number" data-count="50">0</div>
+              <div class="stat-label">مليار دولار حجم السوق</div>
+            </div>
+            <div class="stat-card fade-in-up">
+              <div class="stat-number" data-count="100">0</div>
+              <div class="stat-label">مليون+ مستخدم حول العالم</div>
+            </div>
+            <div class="stat-card fade-in-up">
+              <div class="stat-number" data-count="200">0</div>
+              <div class="stat-label">أداة وموديل AI متاح</div>
+            </div>
+            <div class="stat-card fade-in-up">
+              <div class="stat-number" data-count="85">0</div>
+              <div class="stat-label">% نمو سنوي متوقع</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced image -->
+        <!-- Before / After Section -->
+        <div class="before-after-section">
+          <div class="before-after-container">
+            <!-- Image Comparison Slider -->
+            <div class="before-after-slider fade-in-up" id="beforeAfterSlider">
+              <div class="comparison-image comparison-before">
+                <img
+                  src="assets/imgs/DSC02765_b.webp"
+                  alt="الصورة قبل التعديل"
+                />
+              </div>
+              <div
+                class="comparison-image comparison-after"
+                id="comparisonAfter"
+              >
+                <img
+                  src="assets/imgs/DSC02765_A.webp"
+                  alt="الصورة بعد التعديل"
+                />
+              </div>
+              <div class="comparison-divider" id="comparisonDivider">
+                <div class="comparison-handle">
+                  <span>↔</span>
+                </div>
+              </div>
+              <inpu
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                class="comparison-range"
+                id="comparisonRange"
+                aria-label="تحريك للمقارنة بين الصورة قبل وبعد"
+              />
+              <div class="comparison-label before-label">بعد</div>
+              <div class="comparison-label after-label">قبل</div>
+            </div>
+
+            <!-- Content -->
+            <div class="before-after-content fade-in-up">
+              <h2 class="before-after-title">
+                تحسين ألوان الصور باستخدام الـ Photoshop
+              </h2>
+
+              <p class="before-after-description">
+                يوضح هذا المثال الفرق بين الصورة الأصلية والصورة بعد المعالجة
+                باستخدام الفوتوشوب.
+              </p>
+
+              <div class="edit-points">
+                <div class="edit-point">
+                  <span class="edit-point-icon">💡</span>
+                  <div>
+                    <h4>تحسين الإضاءة</h4>
+                    <p>موازنة المناطق الداكنة والفاتحة للحصول على صورة أوضح.</p>
+                  </div>
+                </div>
+
+                <div class="edit-point">
+                  <span class="edit-point-icon">🎨</span>
+                  <div>
+                    <h4>تصحيح الألوان</h4>
+                    <p>إظهار الألوان بشكل أغنى وأكثر انسجامًا مع المشهد.</p>
+                  </div>
+                </div>
+
+                <div class="edit-point">
+                  <span class="edit-point-icon">🔍</span>
+                  <div>
+                    <h4>إبراز التفاصيل</h4>
+                    <p>
+                      زيادة وضوح العناصر المهمة دون جعل الصورة تبدو غير طبيعية.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Expalin Video -->
+        <!-- AI Image Generation Video Section -->
+        <div class="ai-video-section">
+          <div class="ai-video-container">
+            <!-- Content -->
+            <div class="ai-video-content fade-in-up">
+              <span class="section-label">🎬 تجربة عملية</span>
+
+              <h2 class="ai-video-title">
+                كيف نستخدم الذكاء الاصطناعي التوليدي لإنشاء الصور؟
+              </h2>
+
+              <p class="ai-video-description">
+                يوضح هذا الفيديو رحلة إنشاء صورة باستخدام الذكاء الاصطناعي
+                التوليدي؛ بدءًا من كتابة الفكرة، ثم تحسين الوصف النصي، وصولًا
+                إلى توليد النتيجة النهائية وتعديلها بصريًا لتصبح أكثر وضوحًا
+                واحترافية.
+              </p>
+
+              <div class="ai-video-steps">
+                <div class="ai-video-step">
+                  <span>01</span>
+                  <div>
+                    <h4>كتابة الفكرة</h4>
+                    <p>
+                      تحويل الفكرة العامة إلى وصف واضح قابل للفهم من نموذج
+                      الذكاء الاصطناعي.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="ai-video-step">
+                  <span>02</span>
+                  <div>
+                    <h4>تحسين الـ Prompt</h4>
+                    <p>
+                      إضافة تفاصيل مثل الإضاءة، الأسلوب، زاوية التصوير،
+                      والخامات.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="ai-video-step">
+                  <span>03</span>
+                  <div>
+                    <h4>تقييم النتيجة</h4>
+                    <p>
+                      اختيار أفضل نتيجة وتعديلها للحصول على صورة متناسقة وقابلة
+                      للاستخدام.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Player -->
+            <div class="ai-video-player-card fade-in-up">
+              <div class="custom-video-player" id="customVideoPlayer">
+                <video
+                  id="aiProcessVideo"
+                  class="ai-process-video"
+                  poster="assets/imgs/home_video_thumb.webp"
+                  preload="metadata"
+                >
+                  <source
+                    src="assets/video/Generate_image_prompt.mp4"
+                    type="video/mp4"
+                  />
+                  المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                </video>
+                <button
+                  class="video-main-play"
+                  id="videoMainPlay"
+                  aria-label="تشغيل الفيديو"
+                >
+                  ▶
+                </button>
+                <div class="video-controls">
+                  <button
+                    class="video-control-btn"
+                    id="videoPlayPause"
+                    aria-label="تشغيل أو إيقاف"
+                  >
+                    ▶
+                  </button>
+
+                  <div class="video-time">
+                    <span id="videoCurrentTime">0:00</span>
+                  </div>
+
+                  <input
+                    type="range"
+                    class="video-progress-range"
+                    id="videoProgressRange"
+                    min="0"
+                    max="100"
+                    value="0"
+                    aria-label="تقدم الفيديو"
+                  />
+
+                  <div class="video-time">
+                    <span id="videoDuration">0:00</span>
+                  </div>
+
+                  <button
+                    class="video-control-btn"
+                    id="videoMuteBtn"
+                    aria-label="كتم الصوت"
+                  >
+                    🔊
+                  </button>
+
+                  <button
+                    class="video-control-btn"
+                    id="videoFullscreenBtn"
+                    aria-label="ملء الشاشة"
+                  >
+                    ⛶
+                  </button>
+                </div>
+              </div>
+
+              <div class="ai-video-caption">
+                <span>🧠</span>
+                <p>
+                  مثال عملي يشرح كيف تتحول الفكرة النصية إلى صورة مولّدة بالذكاء
+                  الاصطناعي.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Features -->
+        <div class="features-section">
+          <div class="section-header">
+            <span class="section-label">✨ المميزات</span>
+            <h2 class="section-title">لماذا الذكاء الاصطناعي التوليدي؟</h2>
+            <p class="section-subtitle">
+              تقنيات تغير قواعد اللعبة في عالم الإبداع والتكنولوجيا
+            </p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">🎨</div>
+              <h3 class="feature-title">توليد الصور</h3>
+              <p class="feature-desc">
+                إنشاء صور فنية مذهلة من أوصاف نصية بسيطة باستخدام نماذج متقدمة
+                مثل DALL-E و Midjourney
+              </p>
+            </div>
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">🎵</div>
+              <h3 class="feature-title">توليد الصوت والموسيقى</h3>
+              <p class="feature-desc">
+                تحويل النصوص إلى كلام طبيعي وتوليد موسيقى أصلية بأدوات مثل
+                ElevenLabs و MusicGen
+              </p>
+            </div>
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">🎬</div>
+              <h3 class="feature-title">توليد الفيديو</h3>
+              <p class="feature-desc">
+                إنشاء مقاطع فيديو احترافية من نصوص وصفية باستخدام Runway ML و
+                Sora
+              </p>
+            </div>
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">📝</div>
+              <h3 class="feature-title">توليد النصوص</h3>
+              <p class="feature-desc">
+                كتابة محتوى إبداعي وتقارير وأكواد برمجية باستخدام نماذج لغوية
+                متقدمة مثل GPT
+              </p>
+            </div>
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon">🔬</div>
+              <h3 class="feature-title">البحث والابتكار</h3>
+              <p class="feature-desc">
+                تسريع الأبحاث العلمية واكتشاف أدوية جديدة وتحليل البيانات
+                المعقدة
+              </p>
+            </div>
+            <div class="feature-card fade-in-up">
+              <div class="feature-icon"></div>
+              <h3 class="feature-title">تعزيز الإبداع</h3>
+              <p class="feature-desc">
+                أتمتة المهام الروتينية وتمكين المبدعين من التركيز على الأفكار
+                والابتكار
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="Lightbox Image" id="lightboxImg" />
+    </div>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

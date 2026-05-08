@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenova - الذكاء الاصطناعي التوليدي</title>
+
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/imgs/logo/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/imgs/logo/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/imgs/logo/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="stylesheet" href="./assets/css/site.css" />
+    <!--Lottiefiles CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div id="nav-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- ==================== HOW IT WORKS PAGE ==================== -->
+      <section class="page-section" id="page-howItWorks">
+        <div class="how-it-works-page">
+          <div class="section-header">
+            <span class="section-label">️ كيف يعمل</span>
+            <h2 class="section-title">
+              آلية عمل نماذج الذكاء الاصطناعي التوليدي
+            </h2>
+            <p class="section-subtitle">
+              افهم التقنيات الأساسية وراء توليد المحتوى الإبداعي
+            </p>
+          </div>
+
+          <!-- GAN Section -->
+          <div class="diagram-section">
+            <div class="section-header" style="margin-bottom: 1.5rem">
+              <span class="section-label">🔄 الشبكات التوليدية التنافسية</span>
+              <h2 class="section-title" style="font-size: 2rem">
+                GANs - Generative Adversarial Networks
+              </h2>
+            </div>
+            <div class="diagram-container">
+              <p class="diagram-description">
+                تعتمد GANs على نظام تنافسي بين شبكتين عصبيتين: المُولِّد
+                (Generator) والمُمَيِّز (Discriminator). يتنافس الاثنان معاً
+                لتحسين جودة المحتوى المُولّد.
+              </p>
+              <div class="gan-diagram">
+                <div class="gan-component generator">
+                  <div class="gan-icon gen-icon">🎨</div>
+                  <h4>المُولِّد (Generator)</h4>
+                  <p>يولد محتوى جديد (صور، أصوات) من الضوضاء العشوائية</p>
+                </div>
+                <div class="gan-arrows">
+                  <div class="gan-arrow">
+                    <span>محتوى مزيف ←</span>
+                    <div class="arrow-line"></div>
+                  </div>
+                  <div class="gan-arrow">
+                    <div
+                      class="arrow-line"
+                      style="transform: rotate(180deg)"
+                    ></div>
+                    <span>→ تغذية راجعة</span>
+                  </div>
+                </div>
+                <div class="gan-component discriminator">
+                  <div class="gan-icon dis-icon">🔍</div>
+                  <h4>المُمَيِّز (Discriminator)</h4>
+                  <p>يحاول التمييز بين المحتوى الحقيقي والمحتوى المُولّد</p>
+                </div>
+              </div>
+              <div class="gan-flow">
+                <h4 class="gan-flow-title">📋 خطوات عمل GAN:</h4>
+                <div class="gan-steps">
+                  <div class="gan-step">
+                    <div class="gan-step-num">1</div>
+                    <span>إدخال ضوضاء عشوائية</span>
+                  </div>
+                  <span class="step-arrow">></span>
+                  <div class="gan-step">
+                    <div class="gan-step-num">2</div>
+                    <span>المُولِّد ينشئ محتوى</span>
+                  </div>
+                  <span class="step-arrow">></span>
+                  <div class="gan-step">
+                    <div class="gan-step-num">3</div>
+                    <span>المُمَيِّز يحلّل المحتوى</span>
+                  </div>
+                  <span class="step-arrow">></span>
+                  <div class="gan-step">
+                    <div class="gan-step-num">4</div>
+                    <span>تحديث الأوزان</span>
+                  </div>
+                  <span class="step-arrow">></span>
+                  <div class="gan-step">
+                    <div class="gan-step-num">5</div>
+                    <span>تكرار حتى الإتقان</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diffusion Section -->
+          <div class="diagram-section">
+            <div class="section-header" style="margin-bottom: 1.5rem">
+              <span class="section-label">🌊 نماذج الانتشار</span>
+              <h2 class="section-title" style="font-size: 2rem">
+                Diffusion Models
+              </h2>
+            </div>
+            <div class="diagram-container">
+              <p class="diagram-description">
+                تعتمد نماذج الانتشار على عملية تدريجية لإضافة الضوضاء ثم إزالتها
+                بشكل عكسي. تُعد هذه النماذج من أقوى تقنيات توليد الصور حالياً
+                وتُستخدم في DALL-E 2 و Stable Diffusion.
+              </p>
+
+              <div class="diffusion-diagram">
+                <div class="diffusion-flow">
+                  <div class="diffusion-box forward">
+                    <div class="diffusion-icon">📸</div>
+                    <h4>عملية الإضافة الأمامية</h4>
+                    <p>
+                      إضافة ضوضاء تدريجية للصورة الأصلية حتى تتحول لضوضاء
+                      عشوائية كاملة
+                    </p>
+                  </div>
+
+                  <div class="diffusion-center">
+                    <div class="noise-visual">️</div>
+                    <span
+                      style="color: var(--text-secondary); font-size: 0.85rem"
+                      >ضوضاء كاملة</span
+                    >
+                  </div>
+
+                  <div class="diffusion-box reverse">
+                    <div class="diffusion-icon">✨</div>
+                    <h4>عملية الإزالة العكسية</h4>
+                    <p>
+                      إزالة الضوضاء تدريجياً من صورة عشوائية للوصول لصورة واضحة
+                      ومفصلة
+                    </p>
+                  </div>
+                </div>
+
+                <div class="diffusion-steps-container">
+                  <h4 style="margin-bottom: 1.5rem; color: var(--accent-cyan)">
+                    📊 مراحل عملية الانتشار:
+                  </h4>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator noise">T₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill noise-fill"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <span class="step-label">صورة أصلية</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator noise">T₂₅</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill noise-fill"
+                        style="width: 25%"
+                      ></div>
+                    </div>
+                    <span class="step-label">قليل من الضوضاء</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator noise">T₅₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill noise-fill"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                    <span class="step-label">ضوضاء متوسطة</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator noise">T₇₅</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill noise-fill"
+                        style="width: 75%"
+                      ></div>
+                    </div>
+                    <span class="step-label">ضوضاء عالية</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator noise">T₁₀₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill noise-fill"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                    <span class="step-label">ضوضاء كاملة</span>
+                  </div>
+
+                  <div style="height: 1.5rem"></div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator clean">T₁₀₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill clean-fill"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <span class="step-label">ضوضاء كاملة</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator clean">T₇₅</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill clean-fill"
+                        style="width: 25%"
+                      ></div>
+                    </div>
+                    <span class="step-label">إزالة ضوضاء</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator clean">T₅₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill clean-fill"
+                        style="width: 50%"
+                      ></div>
+                    </div>
+                    <span class="step-label">تكوين الشكل</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator clean">T₂₅</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill clean-fill"
+                        style="width: 75%"
+                      ></div>
+                    </div>
+                    <span class="step-label">تفاصيل واضحة</span>
+                  </div>
+
+                  <div class="diffusion-step-bar">
+                    <div class="step-indicator clean">T₀</div>
+                    <div class="step-bar-line">
+                      <div
+                        class="step-bar-fill clean-fill"
+                        style="width: 100%"
+                      ></div>
+                    </div>
+                    <span class="step-label">صورة مولّدة ✓</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Comparison: GANs vs Diffusion -->
+          <div class="diagram-section">
+            <h3
+              style="
+                text-align: center;
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+              "
+            >
+              🔄 مقارنة: GANs vs Diffusion Models
+            </h3>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>المعيار</th>
+                  <th>GANs</th>
+                  <th>Diffusion Models</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>جودة الصور</td>
+                  <td>جيدة جداً</td>
+                  <td>ممتازة (أفضل حالياً)</td>
+                </tr>
+                <tr>
+                  <td>سرعة التوليد</td>
+                  <td>سريعة ⚡</td>
+                  <td>بطيئة نسبياً 🐢</td>
+                </tr>
+                <tr>
+                  <td>استقرار التدريب</td>
+                  <td>صعب (مشكلة الانهيار)</td>
+                  <td>مستقر جداً</td>
+                </tr>
+                <tr>
+                  <td>التنوع</td>
+                  <td>محدود أحياناً</td>
+                  <td>متنوع جداً</td>
+                </tr>
+                <tr>
+                  <td>الأمثلة الشهيرة</td>
+                  <td>StyleGAN, CycleGAN</td>
+                  <td>DALL-E 2, Stable Diffusion</td>
+                </tr>
+                <tr>
+                  <td>استهلاك الموارد</td>
+                  <td>متوسط</td>
+                  <td>عالي</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="Lightbox Image" id="lightboxImg" />
+    </div>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>
