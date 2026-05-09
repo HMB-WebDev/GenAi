@@ -183,6 +183,16 @@ function initBeforeAfterSlider() {
   updateComparison(range.value);
 }
 
+function getBasePath() {
+  const path = window.location.pathname;
+  if (path.includes("/")) {
+    const pathParts = path.split("/");
+    if (pathParts[1] && !pathParts[1].includes(".")) {
+      return "/" + pathParts[1] + "/";
+    }
+  }
+  return "/";
+}
 // ==================== CUSTOM VIDEO PLAYER ====================
 function initCustomVideoPlayer() {
   const player = document.getElementById("customVideoPlayer");
@@ -311,11 +321,15 @@ function initLottieAnimations() {
 
 function LoadNavigation(page) {
   const container = document.querySelector("#nav-container");
+  // debugger;
+  const pathname = getBasePath();
+  console.log(pathname);
+
   if (container) {
     container.innerHTML = `
   <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="/" class="logo">
+        <a href="${pathname}" class="logo">
           <img
             src="assets/imgs/logo/logoMark_colored.svg"
             alt="Gerenova Logo"
@@ -328,21 +342,21 @@ function LoadNavigation(page) {
             <a
               class="nav-link ${page == "/" ? "active" : ""}"
               data-page="home"
-              href="../"
+              href="${pathname}"
               >الرئيسية</a
             >
           </li>
           <li>
             <a class="nav-link ${page.includes("tools") ? "active" : ""}" 
             data-page="tools" 
-            href="tools.html"
+            href="${pathname}tools.html"
               >الأدوات</a
             >
           </li>
           <li>
             <a 
             class="nav-link ${page.includes("gallery") ? "active" : ""}"
-            data-page="media" href="gallery.html"
+            data-page="media" href="${pathname}gallery.html"
               >المعرض</a
             >
           </li>
@@ -350,7 +364,7 @@ function LoadNavigation(page) {
             <a
             class="nav-link ${page.includes("how") ? "active" : ""}"
               data-page="howItWorks"
-              href="how.html"
+              href="${pathname}how.html"
               >كيف يعمل</a
             >
           </li>
@@ -372,13 +386,14 @@ function LoadNavigation(page) {
 
 function LoadFooter() {
   const footer = document.querySelector("#footer-container");
+  const pathname = getBasePath();
 
   if (footer) {
     footer.innerHTML = `
     <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="../" class="logo">
+        <a href="${pathname}" class="logo">
           <img
             src="assets/imgs/logo/logoMark_colored.svg"
             alt="Gerenova AI Logo"
@@ -394,10 +409,10 @@ function LoadFooter() {
       <div class="footer-col">
         <h4>الصفحات</h4>
         <ul>
-          <li><a href='../'>الرئيسية</a></li>
-          <li><a href='tools.html'>الأدوات</a></li>
-          <li><a href='gallery.html'>المعرض</a></li>
-          <li><a href='how.html'>كيف يعمل</a></li>
+          <li><a href='${pathname}'>الرئيسية</a></li>
+          <li><a href='${pathname}tools.html'>الأدوات</a></li>
+          <li><a href='${pathname}gallery.html'>المعرض</a></li>
+          <li><a href='${pathname}how.html'>كيف يعمل</a></li>
         </ul>
       </div>
       <div class="footer-col">
