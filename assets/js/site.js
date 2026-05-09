@@ -140,6 +140,28 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeLightbox();
 });
 
+// ==================== DIFFUSION ANIMATION ====================
+function initDiffusionAnimation() {
+  const fills = document.querySelectorAll(".step-bar-fill");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const fill = entry.target;
+          const targetWidth = fill.style.width;
+          fill.style.width = "0%";
+          setTimeout(() => {
+            fill.style.width = targetWidth;
+          }, 200);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  fills.forEach((fill) => observer.observe(fill));
+}
+
 // ========= Enhanced image ================
 // ==================== BEFORE / AFTER SLIDER ====================
 function initBeforeAfterSlider() {
@@ -265,10 +287,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initTypingEffect();
   animateCounters();
   initScrollAnimations();
-  // initDiffusionAnimation();
-  initBeforeAfterSlider();
+  initDiffusionAnimation();
   initCustomVideoPlayer();
   initLottieAnimations();
+  initBeforeAfterSlider();
   LoadNavigation(window.location.pathname);
   LoadFooter();
 });
@@ -306,21 +328,21 @@ function LoadNavigation(page) {
             <a
               class="nav-link ${page == "/" ? "active" : ""}"
               data-page="home"
-              href="/"
+              href="../"
               >الرئيسية</a
             >
           </li>
           <li>
-            <a class="nav-link ${
-              page.includes("tools") ? "active" : ""
-            }" data-page="tools" href="/tools.html"
+            <a class="nav-link ${page.includes("tools") ? "active" : ""}" 
+            data-page="tools" 
+            href="tools.html"
               >الأدوات</a
             >
           </li>
           <li>
             <a 
             class="nav-link ${page.includes("gallery") ? "active" : ""}"
-            data-page="media" href="/gallery.html"
+            data-page="media" href="gallery.html"
               >المعرض</a
             >
           </li>
@@ -328,7 +350,7 @@ function LoadNavigation(page) {
             <a
             class="nav-link ${page.includes("how") ? "active" : ""}"
               data-page="howItWorks"
-              href="/how.html"
+              href="how.html"
               >كيف يعمل</a
             >
           </li>
@@ -350,12 +372,13 @@ function LoadNavigation(page) {
 
 function LoadFooter() {
   const footer = document.querySelector("#footer-container");
+
   if (footer) {
     footer.innerHTML = `
     <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
-        <a href="/" class="logo">
+        <a href="../" class="logo">
           <img
             src="assets/imgs/logo/logoMark_colored.svg"
             alt="Gerenova AI Logo"
@@ -371,10 +394,10 @@ function LoadFooter() {
       <div class="footer-col">
         <h4>الصفحات</h4>
         <ul>
-          <li><a href='/'>الرئيسية</a></li>
-          <li><a href='/tools.html'>الأدوات</a></li>
-          <li><a href='/gallery.html'>المعرض</a></li>
-          <li><a href='/how.html'>كيف يعمل</a></li>
+          <li><a href='../'>الرئيسية</a></li>
+          <li><a href='tools.html'>الأدوات</a></li>
+          <li><a href='gallery.html'>المعرض</a></li>
+          <li><a href='how.html'>كيف يعمل</a></li>
         </ul>
       </div>
       <div class="footer-col">
